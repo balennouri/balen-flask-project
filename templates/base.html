@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Cristiano Ronaldo</title>
 </head>
 
@@ -40,14 +41,14 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+    <header class="masthead" style="background-image: url('https://imageresizer.static9.net.au/8LL5dfXsm3Lxg9qyt_Dm0lMIalM=/0x0/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2F2016%2F05%2F05%2F06%2F03%2F050516ronaldo_g.jpg')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <h1>Clean Blog</h1>
-                        <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                        <h1>Cristiano Ronaldo</h1>
+                        <span class="subheading">Blog About CR7</span>
                     </div>
                 </div>
             </div>
@@ -93,7 +94,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+                    <p class="copyright text-muted">Copyright &copy; Your Website <span id="copyright"></span></p>
                 </div>
             </div>
         </div>
@@ -105,6 +106,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+
+    <script>
+        $("#copyright").text(new Date().getFullYear());
+    </script>
 </body>
 
 </html>
